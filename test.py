@@ -1,5 +1,5 @@
 import pygame
-#sudo apt install python3-pip
+#pip install pygame
 
 pygame.init()
 dis=pygame.display.set_mode((400,300))
