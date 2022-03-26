@@ -1,2 +1,2 @@
-print("hello world\n")
+print("hello world")
 print("Testing local changes")
