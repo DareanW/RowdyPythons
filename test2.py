@@ -43,6 +43,7 @@ def message(msg, color):
  
  
 def gameLoop():
+    direction = ""
     game_over = False
     game_close = False
  
@@ -78,16 +79,20 @@ def gameLoop():
             if event.type == pygame.QUIT:
                 game_over = True
             if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_LEFT:
+                if event.key == pygame.K_LEFT and direction != "right":
+                    direction = "left"
                     x1_change = -snake_block
                     y1_change = 0
-                elif event.key == pygame.K_RIGHT:
+                elif event.key == pygame.K_RIGHT and direction != "left":
+                    direction = "right"
                     x1_change = snake_block
                     y1_change = 0
-                elif event.key == pygame.K_UP:
+                elif event.key == pygame.K_UP and direction != "down":
+                    direction = "up"
                     y1_change = -snake_block
                     x1_change = 0
-                elif event.key == pygame.K_DOWN:
+                elif event.key == pygame.K_DOWN and direction != "up":
+                    direction = "down"
                     y1_change = snake_block
                     x1_change = 0
  
