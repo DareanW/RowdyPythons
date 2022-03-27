@@ -12,8 +12,8 @@ green = (0, 255, 0)
 blue = (50, 153, 213)
 purple = (73, 17, 107)
  
-dis_width = 800
-dis_height = 800
+dis_width = 600
+dis_height = 600
  
 dis = pygame.display.set_mode((dis_width, dis_height))
 pygame.display.set_caption('Python Game')
@@ -35,7 +35,7 @@ def Your_score1(score):
 
 def Your_score2(score2):
     value = score_font.render("Player 2 Score: " + str(score2), True, yellow)
-    dis.blit(value, [500, 0])
+    dis.blit(value, [300, 0])
  
  
  
